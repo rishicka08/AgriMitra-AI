@@ -1,3 +1,4 @@
+
 # Logs
 logs
 *.log
@@ -7,12 +8,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Build files
+dist/
+dist-ssr/
+backend/dist/
+
+# Environment variables - KEEP API KEYS PRIVATE
+.env
+.env.*
+backend/.env
+!.env.example
+
+# Local files
 *.local
 
-# Editor directories and files
+# Editor files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,4 +36,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-backend/.env
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+pids/
+
+# Testing and coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Caches
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+.vite/
+.turbo/
+.nx/cache/
+
+# Other generated files
+*.tsbuildinfo
+*.tgz
+build/Release/
