@@ -97,7 +97,7 @@ const getMandiPrices = async () => {
   setMandiPrices([])
 
   try {
-    const url = `http://localhost:5001/api/mandi?state=${encodeURIComponent(mandiState)}&commodity=${encodeURIComponent(mandiCrop)}`
+    const url = `/api/mandi?state=${encodeURIComponent(mandiState)}&commodity=${encodeURIComponent(mandiCrop)}`
 
     const response = await fetch(url)
     const result = await response.json()
@@ -124,7 +124,7 @@ const askAssistant = async () => {
   setAssistantAnswer('')
 
   try {
-    const response = await fetch('http://localhost:5001/api/assistant', {
+    const response = await fetch('/api/assistant', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

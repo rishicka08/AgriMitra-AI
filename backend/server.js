@@ -13,7 +13,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const PORT = 5001
 
 app.get('/', (req, res) => {
   res.send('AgriMitra AI Backend is running!')
@@ -126,6 +125,4 @@ Farmer's question: ${question}`
   }
 })
 
-app.listen(PORT, () => {
-  console.log(`AgriMitra backend running at http://localhost:${PORT}`)
-})
+module.exports = app
